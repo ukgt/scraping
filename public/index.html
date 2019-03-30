@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+     <head>
+          <meta charset="UTF-8">
+          <title>Scraping With Mongoose</title>
+          <style>
+               body {
+                    background-color: rgb(154, 206, 163)
+               }
+
+               #wrapper {
+                    width: 960px;
+                    margin-left: auto;
+                    margin-right: auto;
+                    padding-top: 5%;
+               }
+
+               #articles {
+                    display: inline-block;
+                    overflow: auto;
+                    width: 80%;
+                    height: 700px;
+               }
+
+               #notes {
+                    float: right;
+                    width: 20%;
+               }
+
+               textarea,
+               input {
+                    display: block;
+                    width: 100%;
+                    background-color: #FCF5C7;
+               }
+
+               input {
+                    height: 36px;
+                    font-size: 24px;
+               }
+
+               textarea {
+                    height: 200px;
+                    font-size: 18px;
+               }
+
+     
+          </style>
+     </head>
+
+     <body>
+          <div id="wrapper">
+               <h1 style="text-align: center">Scraper Homework</h1>
+               <input type="button" class="w3-button w3-black" value="Click To Scrape">
+               <h2 style="text-align: center"><i>I don't think scraping is a good idea.</i></h2>
+               <div id="articles"></div>
+               <div id="notes"></div>
+               <div id ="btnScrape"></div>
+          </div>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+          <script src="app.js"></script>
+     </body>
+
+</html>
