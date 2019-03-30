@@ -41,7 +41,7 @@ mongoose.connect(mongoscrapehw);
 // Routes
 
 // A GET route for scraping the echoJS website
-$(document).on("click", "#btnScrape", function () {
+// $(document).on("click", "#btnScrape", function () {
 app.get("/scrape", function (req, res) {
      // First, we grab the body of the html with axios
      axios.get("https://infobeat.com/category/tips/").then(function (response) {
@@ -78,7 +78,7 @@ app.get("/scrape", function (req, res) {
           res.send("Scrape Complete");
      });
 });
-},
+// },
 // Route for getting all Categoriess from the db
 app.get("/category/tips", function (req, res) {
      // Grab every document in the Categoriess collection
@@ -91,7 +91,7 @@ app.get("/category/tips", function (req, res) {
                // If an error occurred, send it to the client
                res.json(err);
           });
-}));
+});
 
 
 // Route for grabbing a specific Categories by id, populate it with it's note

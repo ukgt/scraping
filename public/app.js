@@ -4,13 +4,13 @@
 $.getJSON("/category/tips", function (data) {
      // For each one
      for (var i = 0; i < data.length; i++) {
-          // Display the apropos information on the page
+          // Display information on the page
           $("#articles").append("<p data-id='" + data[i]._id + "'>" + data[i].title + "<br />" + data[i].link + "</p>");
      }
 });
 
 
-// Whenever someone clicks a p tag
+// p tag click
 $(document).on("click", "p", function () {
      // Empty the notes from the note section
      $("#notes").empty();
@@ -20,7 +20,7 @@ $(document).on("click", "p", function () {
      // Now make an ajax call for the Category
      $.ajax({
                method: "GET",
-               url: "/category/tips" + thisId
+               url: "/category/tips/" + thisId
           })
           // With that done, add the note information to the page
           .then(function (data) {
@@ -52,7 +52,7 @@ $(document).on("click", "#savenote", function () {
      // Run a POST request to change the note, using what's entered in the inputs
      $.ajax({
                method: "POST",
-               url: "/category/tips" + thisId,
+               url: "/category/tips/" + thisId,
                data: {
                     // Value taken from title input
                     title: $("#titleinput").val(),
