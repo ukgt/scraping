@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 /* eslint-disable no-undef */
 // Grab the articles as a json
-$.getJSON("/category/tips", function (data) {
+$.getJSON("/category/tips/", function (data) {
      // For each one
      for (var i = 0; i < data.length; i++) {
           // Display information on the page
